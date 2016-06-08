@@ -1,10 +1,11 @@
 var path = require('path')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.join(__dirname, 'build'),
-    filename: "bundle.js"
+    filename: "bundle.[hash].js"
   },
   module: {
     loaders: [
@@ -19,5 +20,10 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Hello'
+    })
+  ],
   devtool: 'source-map'
 };
