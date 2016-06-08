@@ -1,4 +1,4 @@
-# webpack-boilerplate
+# react-webpack-boilerplate
 
 Boilerplate files for starting new web project using Webpack as builder / dev-server
 
