@@ -1,5 +1,6 @@
 var path = require('path')
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
   entry: "./src/index.js",
@@ -16,14 +17,15 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: "style!css"
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap")
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Hello'
-    })
+    }),
+    new ExtractTextPlugin("styles.[hash].css")
   ],
   devtool: 'source-map'
 };
