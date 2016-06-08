@@ -6,8 +6,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import bootstrap from 'bootstrap/dist/css/bootstrap.css'
 import styles from './main.css'
 
-var appRoot = document.createElement('div')
-appRoot.id = "app"
+const appRoot = document.createElement('div')
 document.body.appendChild(appRoot)
 
 ReactDOM.render(
