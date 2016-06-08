@@ -1,8 +1,9 @@
 import React from 'react'
+import { Jumbotron } from 'react-bootstrap'
 
 class Hello extends React.Component {
   render() {
-    return <h1>Hello</h1>
+    return <Jumbotron><h1>Hello World!</h1></Jumbotron>
   }
 }
 
