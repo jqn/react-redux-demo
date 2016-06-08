@@ -1,9 +1,10 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Hello from './hello'
 
-require('./main.css')
+import styles from './main.css'
 
 ReactDOM.render(
-  React.createElement('h1', null, 'Hello world'),
+  <Hello></Hello>,
   document.getElementById('app')
 );
