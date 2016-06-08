@@ -1,16 +1,16 @@
 # react-webpack-boilerplate
 
-Boilerplate files for starting new web project using Webpack as builder / dev-server
+Boilerplate for starting new React web project with Webpack as build system / dev-server
 
 ## Targets
 
-Build to ./build with
+Build to `./build` with
 
 ```
 npm run build
 ```
 
-Run dev server on http://localhost:8080 with
+Run dev server on [http://localhost:8080] with
 
 ```
 npm run serve
