@@ -2,8 +2,8 @@
   "name": "react-webpack-boilerplate",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --progress --colors && cp index.html build/",
-    "serve": "webpack-dev-server --progress --colors"
+    "build": "webpack --progress --colors && cp src/index.html build/",
+    "serve": "webpack-dev-server --progress --colors --content-base src/"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",
