@@ -20,8 +20,8 @@ module.exports = {
         loaders: ['react-hot', 'babel']
       },
       {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        test: /\.scss$/,
+        loader: 'style!css!sass'
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,

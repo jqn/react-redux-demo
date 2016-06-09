@@ -9,7 +9,7 @@ const PATHS = {
 
 module.exports = {
   entry: {
-    vendor: ['react','react-dom','react-bootstrap','bootstrap'],
+    vendor: ['react','react-dom','react-bootstrap','bootstrap-sass'],
     app: './src/index.js'
   },
   output: {
@@ -24,8 +24,8 @@ module.exports = {
         loader: 'babel'
       },
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap')
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css?sourceMap!sass?sourceMap')
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
