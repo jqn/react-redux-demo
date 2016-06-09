@@ -11,7 +11,7 @@ const PATHS = {
 module.exports = {
   entry: {
     vendor: ['react','react-dom','react-bootstrap','bootstrap-sass'],
-    app: './src/index.js'
+    app: './src/index.jsx'
   },
   output: {
     path: PATHS.build,

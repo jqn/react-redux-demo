@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Hello from './hello'
+import Hello from './hello.jsx'
 import { Grid, Row, Col } from 'react-bootstrap';
 import styles from './main.scss'
 
