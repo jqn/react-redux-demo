@@ -1,12 +1,16 @@
+var webpack = require('webpack')
 var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-var ExtractTextPlugin = require("extract-text-webpack-plugin")
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    vendor: ['react','react-dom','react-bootstrap','bootstrap'],
+    app: './src/index.js'
+  },
   output: {
     path: path.join(__dirname, 'build'),
-    filename: "bundle.[hash].js"
+    filename: 'bundle.[chunkhash].js'
   },
   module: {
     loaders: [
@@ -17,7 +21,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap")
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap')
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
@@ -26,10 +30,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.[chunkhash].js'),
     new HtmlWebpackPlugin({
       title: 'Hello'
     }),
-    new ExtractTextPlugin("styles.[hash].css")
+    new ExtractTextPlugin('bundle.[chunkhash].css')
   ],
   devtool: 'source-map'
 };
