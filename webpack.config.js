@@ -1,7 +1,11 @@
-var webpack = require('webpack')
-var path = require('path')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+const PATHS = {
+  build: path.join(__dirname, 'build')
+}
 
 module.exports = {
   entry: {
@@ -9,7 +13,7 @@ module.exports = {
     app: './src/index.js'
   },
   output: {
-    path: path.join(__dirname, 'build'),
+    path: PATHS.build,
     filename: 'bundle.[chunkhash].js'
   },
   module: {
