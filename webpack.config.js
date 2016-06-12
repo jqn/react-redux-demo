@@ -10,8 +10,8 @@ const PATHS = {
 
 module.exports = {
   entry: {
-    vendor: ['react','react-dom','react-bootstrap','bootstrap-sass'],
-    app: './src/index.jsx'
+    app: './src/index.jsx',
+    vendor: ['react','react-dom','react-bootstrap','react-router','react-router-bootstrap']
   },
   output: {
     path: PATHS.build,
@@ -35,10 +35,15 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.[chunkhash].js'),
-    new HtmlWebpackPlugin({ title: 'Hello' }),
+    new CleanWebpackPlugin(PATHS.build, { verbose: true, dry: false }),
+    new HtmlWebpackPlugin({ title: 'React Example' }),
     new ExtractTextPlugin('bundle.[chunkhash].css'),
-    new CleanWebpackPlugin(PATHS.build, { verbose: true, dry: false })
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.[chunkhash].js'),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
   ],
-  devtool: 'source-map'
+  devtool: 'cheap-module-source-map'
 };

@@ -2,7 +2,7 @@
   "name": "react-webpack-boilerplate",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --progress --colors",
+    "build": "webpack --progress --colors -p",
     "serve": "webpack-dev-server --progress --colors --config webpack.config.serve.js --content-base src/"
   },
   "devDependencies": {
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
+    "express": "^4.13.4",
     "react": "^15.1.0",
     "react-bootstrap": "^0.29.4",
     "react-dom": "^15.1.0",
