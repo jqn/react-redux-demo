@@ -10,7 +10,7 @@ const PATHS = {
 
 module.exports = {
   entry: {
-    app: './src/index.jsx',
+    app: './src/index.js',
     vendor: ['react','react-dom','react-bootstrap','react-router','react-router-bootstrap']
   },
   output: {
