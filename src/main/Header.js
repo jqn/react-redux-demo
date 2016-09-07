@@ -5,10 +5,10 @@ import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap'
 
 export default () => {
   return (
-    <Navbar fixedTop inverse>
+    <Navbar fixedTop>
       <Navbar.Header>
         <Navbar.Brand>
-          <Link to="/">React Example</Link>
+          <Link to="/">Tund</Link>
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
@@ -19,6 +19,9 @@ export default () => {
           </IndexLinkContainer>
           <LinkContainer to="/about">
             <NavItem>About</NavItem>
+          </LinkContainer>
+          <LinkContainer to="/projects">
+            <NavItem>Projects</NavItem>
           </LinkContainer>
         </Nav>
       </Navbar.Collapse>
