@@ -8,7 +8,8 @@ const initialState = {
 export default (state = initialState, action) => {
   switch(action.type) {
     case LOG_HOURS:
-    return { ...state, allHours: [action.hours].concat(state.allHours) }
+    const hours = { ...action.hours, projectId: state.selectedProjectId }
+    return { ...state, allHours: [hours].concat(state.allHours) }
     case SELECT_PROJECT:
     return { ...state, selectedProjectId: action.project }
     default:

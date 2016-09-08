@@ -11,24 +11,18 @@ const renderDatePicker = (field) => {
   return <DatePicker className="form-control" selected={selected} {...rest} />
 }
 
-export default class extends Component {
-    onSubmit(hours) {
-      return { ...hours, projectId: this.props.selectedProjectId }
-    }
+export default props => {
+  const { handleSubmit } = props
 
-    render() {
-      const { selectedProjectId, handleSubmit } = this.props
-
-      return (
-        <Form inline onSubmit={handleSubmit(hours => this.onSubmit(hours))} style={{marginBottom: '20px'}}>
-          <ControlLabel>Date:</ControlLabel>{ ' ' }
-          <Field name="date" component={renderDatePicker} />{ ' ' }
-          <ControlLabel>Amount:</ControlLabel>{ ' ' }
-          <Field name="amount" component="input" className="form-control" type="number" placeholder="Hours..." />{ ' ' }
-          <ControlLabel>Description:</ControlLabel>{ ' ' }
-          <Field name="description" component="input" className="form-control" type="text" placeholder="What you did..."/>{ ' ' }
-          <Button bsStyle="success" type="submit">Log</Button>
-        </Form>
-      )
-    }
-  }
+  return (
+    <Form inline onSubmit={handleSubmit} style={{marginBottom: '20px'}}>
+      <ControlLabel>Date:</ControlLabel>{ ' ' }
+      <Field name="date" component={renderDatePicker} />{ ' ' }
+      <ControlLabel>Amount:</ControlLabel>{ ' ' }
+      <Field name="amount" component="input" className="form-control" type="number" placeholder="Hours..." />{ ' ' }
+      <ControlLabel>Description:</ControlLabel>{ ' ' }
+      <Field name="description" component="input" className="form-control" type="text" placeholder="What you did..."/>{ ' ' }
+      <Button bsStyle="success" type="submit">Log</Button>
+    </Form>
+  )
+}
