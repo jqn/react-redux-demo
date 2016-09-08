@@ -21,5 +21,5 @@ npm run build
 Run dev server on http://localhost:8080 with
 
 ```
-npm run serve
+npm run start
 ```

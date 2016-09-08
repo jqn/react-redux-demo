@@ -1,19 +1,9 @@
 import React from 'react'
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
-
-import { Main } from './main'
-import { Home } from './home'
-import { About } from './about'
-import { Projects } from './projects'
+import { Router, browserHistory } from 'react-router'
+import routes from './routes'
 
 const router = (
-  <Router history={browserHistory}>
-    <Route path="/" component={Main}>
-      <IndexRoute component={Home} />
-      <Route path="about" component={About} />
-      <Route path="projects" component={Projects} />
-    </Route>
-  </Router>
+  <Router history={browserHistory} routes={routes} />
 )
 
 export default router

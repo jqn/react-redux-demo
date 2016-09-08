@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --progress --colors -p",
-    "serve": "webpack-dev-server --progress --colors --config webpack.config.serve.js --content-base src/"
+    "start": "node devServer.js"
   },
   "devDependencies": {
     "babel-core": "^6.14.0",
