@@ -23,6 +23,9 @@ export default () => {
           <LinkContainer to="/projects">
             <NavItem>Projects</NavItem>
           </LinkContainer>
+          <LinkContainer to="/time_tracking">
+            <NavItem>Time Tracking</NavItem>
+          </LinkContainer>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
