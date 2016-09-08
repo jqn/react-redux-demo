@@ -2,10 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { reduxForm, reset } from 'redux-form';
 import moment from 'moment'
-import { sortBy } from 'lodash'
 import TimeTrackingView from './TimeTrackingView'
 import { logHours, selectProject } from './actions'
 import { makeHours } from './model'
+import { getSelectedProjectHours, getSelectedProjectId } from './selectors'
+import { selectors as projects } from '../projects'
 
 const formName = 'logHours'
 
@@ -25,9 +26,9 @@ const form = reduxForm({
 
 const mapStateToProps = state => {
   return {
-    projectHours: sortBy(state.hours.allHours.filter(hours => hours.projectId === state.hours.selectedProjectId), 'date').reverse(),
-    allProjects: state.projects.allProjects,
-    selectedProjectId: state.hours.selectedProjectId
+    projectHours: getSelectedProjectHours(state),
+    allProjects: projects.getAllProjects(state),
+    selectedProjectId: getSelectedProjectId(state)
   }
 }
 

@@ -4,6 +4,7 @@ import { reduxForm, reset } from 'redux-form';
 import ProjectsView from './ProjectsView'
 import { addProject } from './actions'
 import { makeProject } from './model'
+import { getAllProjects } from './selectors'
 
 const formName = 'addProject'
 
@@ -18,7 +19,7 @@ const form = reduxForm({
 
 const mapStateToProps = state => {
   return {
-    allProjects: state.projects.allProjects
+    allProjects: getAllProjects(state)
   }
 }
 
