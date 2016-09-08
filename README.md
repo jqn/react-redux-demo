@@ -1,25 +1,31 @@
-# react-webpack-boilerplate
+# react-redux-demo
 
-Boilerplate for starting new React web project with Webpack as build system / dev-server
+Dead simple Time Tracking app for demonstrating React + Redux web app development.
 
-## Features
+The app consists of two pages, Projects and Time Tracking.
 
-- React + React bootstrap
-- ES6/JSX support via Babel
-- JS/CSS bundling to files
-- Separate vendor.js for dependencies
-- Dev server
+Code is organized into separate modules to provide clean and maintainable structure.
 
-## Targets
-
-Build to `./build` with
-
-```
-npm run build
-```
+## Usage
 
 Run dev server on http://localhost:8080 with
 
 ```
 npm run start
 ```
+
+## Used techs
+
+- React + React Bootstrap for UI
+- React router for routing
+- Redux for state management
+- Redux Form for form binding
+- Babel for transpiling JSX/ES6
+- Webpack for bundling app
+
+## TODO
+
+- Data validation
+- Removing/Updating projects and hours
+- Authentication
+- API integration (persisting data)
