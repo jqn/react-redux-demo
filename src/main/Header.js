@@ -14,12 +14,6 @@ export default () => {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav>
-          <IndexLinkContainer to="/">
-            <NavItem>Home</NavItem>
-          </IndexLinkContainer>
-          <LinkContainer to="/about">
-            <NavItem>About</NavItem>
-          </LinkContainer>
           <LinkContainer to="/projects">
             <NavItem>Projects</NavItem>
           </LinkContainer>
