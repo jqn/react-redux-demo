@@ -3,13 +3,14 @@ import { connect } from 'react-redux'
 import { reduxForm, reset } from 'redux-form';
 import ProjectsView from './ProjectsView'
 import { addProject } from './actions'
-import { makeProject } from './model'
+import { validate, makeProject } from './model'
 import { getAllProjects } from './selectors'
 
 const formName = 'addProject'
 
 const form = reduxForm({
   form: formName,
+  validate,
   onSubmit: project => project,
   onSubmitSuccess(project, dispatch) {
     dispatch(addProject(makeProject(project)))

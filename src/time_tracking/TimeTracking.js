@@ -4,7 +4,7 @@ import { reduxForm, reset } from 'redux-form';
 import moment from 'moment'
 import TimeTrackingView from './TimeTrackingView'
 import { logHours, selectProject } from './actions'
-import { makeHours } from './model'
+import { validate, makeHours } from './model'
 import { getSelectedProjectHours, getSelectedProjectId } from './selectors'
 import { selectors as projects } from '../projects'
 
@@ -17,6 +17,7 @@ const form = reduxForm({
     amount: 0,
     description: ''
   },
+  validate,
   onSubmit: hours => hours,
   onSubmitSuccess(hours, dispatch) {
     dispatch(logHours(makeHours(hours)))
