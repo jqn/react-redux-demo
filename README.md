@@ -25,7 +25,6 @@ npm run start
 
 ## TODO
 
-- Data validation
 - Removing/Updating projects and hours
 - Authentication
 - API integration (persisting data)
