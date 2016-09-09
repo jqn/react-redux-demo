@@ -1,4 +1,5 @@
 $icon-font-path: '../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
-$border-radius-base: 2px;
 
+@import './bootswatch/_variables';
 @import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import './bootswatch/_bootswatch';
